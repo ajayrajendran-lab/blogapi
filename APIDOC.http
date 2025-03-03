@@ -1,13 +1,56 @@
 #API for creating account for user
+###
+POST http://127.0.0.1:8000/api/users/
+Content-Type: application/json
 
+{
+    "username":"navya",
+    "email":"navya@gmail.com",
+    "password":"Password@123"
+}
 #Api for create a new post
+###
+POST http://127.0.0.1:8000/api/blogs/
+Content-Type: application/json
+Authorization: Basic ajay:Password@123
+
+{
+    "title":"My food blog3",
+    "description":"Blog about my cooking"
+}
 
 # API for list all posts
+###
+GET http://127.0.0.1:8000/api/blogs/
+Authorization: Basic ajay:Password@123
 
 # API for fetching post detail
+###
+GET http://127.0.0.1:8000/api/blogs/1/
+Authorization: Basic ajay:Password@123
 
 # Api for updating a post
+###
+PUT http://127.0.0.1:8000/api/blogs/1/
+Content-Type: application/json
+Authorization: Basic ajay:Password@123
+
+{
+    "title": "My first blog about work",
+    "description": "Blog about my first day at office"
+}
 
 # Api for deleting a post
+###
+DELETE http://127.0.0.1:8000/api/blogs/3/
+Authorization: Basic ajay:Password@123
 
+# api call for commenting a post
+###
+POST http://127.0.0.1:8000/api/blogs/6/comments/
+Content-Type: application/json
+Authorization: Basic ajay:Password@123
 
+{
+    "message":"Nice one"
+}
